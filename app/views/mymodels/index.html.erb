@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mymodels</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Name</th>
+      <th>Password digest</th>
+      <th>Authority</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mymodels.each do |mymodel| %>
+      <tr>
+        <td><%= mymodel.user_id %></td>
+        <td><%= mymodel.name %></td>
+        <td><%= mymodel.password_digest %></td>
+        <td><%= mymodel.authority %></td>
+        <td><%= link_to 'Show', mymodel %></td>
+        <td><%= link_to 'Edit', edit_mymodel_path(mymodel) %></td>
+        <td><%= link_to 'Destroy', mymodel, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mymodel', new_mymodel_path %>

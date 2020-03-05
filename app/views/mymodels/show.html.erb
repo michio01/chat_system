@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @mymodel.user_id %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mymodel.name %>
+</p>
+
+<p>
+  <strong>Password digest:</strong>
+  <%= @mymodel.password_digest %>
+</p>
+
+<p>
+  <strong>Authority:</strong>
+  <%= @mymodel.authority %>
+</p>
+
+<%= link_to 'Edit', edit_mymodel_path(@mymodel) %> |
+<%= link_to 'Back', mymodels_path %>
